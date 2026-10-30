@@ -902,6 +902,25 @@ a.cl-tile:hover .todo{color:#ff5a4d}
   .mm-wwd{ position:static; width:100%; max-width:none; flex:0 0 100%; margin-top:20px; }
   #mm-0 .mm-head, #mm-1 .mm-head{ flex-wrap:wrap; }
 }
+
+/* MOBILE HOME: troca o canvas 16:9 escalado por um layout empilhado */
+@media (max-width:700px){
+  #view-landing{ height:100vh; height:100svh; background:#fff; }
+  #view-landing.active{ display:block; }
+  .landing-stage{ width:100% !important; height:100% !important; transform:none !important;
+    display:flex; flex-direction:column; background:#fff; }
+  .nh-nav{ order:-1; position:relative !important; left:auto !important; top:auto !important;
+    width:100% !important; height:56px !important; padding:0 !important; flex:0 0 auto; }
+  .nh-navlogo{ flex:0 0 56px; height:56px; border-right:1.5px solid #000; }
+  .nh-navlogo img{ width:36px; height:36px; }
+  .nh-nav button{ font-size:12.5px; line-height:1.15; padding:0 6px; }
+  .nh-sky{ position:relative !important; left:auto !important; top:auto !important;
+    width:calc(100% - 32px) !important; height:auto !important; aspect-ratio:4/3;
+    margin:auto 16px 0; }
+  .nh-title{ position:relative !important; left:auto !important; top:auto !important;
+    width:calc(100% - 32px) !important; margin:0 16px auto;
+    font-size:calc((100vw - 32px) / 16) !important; }
+}
 </style>
 </head>
 <body>
