@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="lock-scroll">
 <head>
-<script>if(/\/mobook$/.test(location.pathname))location.replace(location.pathname+'/'+location.search+location.hash);</script>
+<script>if(/\/mobook$/.test(location.pathname)){document.write('<base href="/mobook/">');document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;var h=a.getAttribute('href');e.preventDefault();var el=h.length>1&&document.getElementById(h.slice(1));if(el)el.scrollIntoView({behavior:'smooth'});else location.hash=h;},true);}</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pop Up Mob — Master MOBook</title>
